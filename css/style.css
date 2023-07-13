@@ -1,0 +1,199 @@
+:root {
+    /* Custom propertys */
+    /* Paleta de colores */
+    --blanco: #ffffff;
+    --negro: #333333;
+    --primario: #f2dd6e;
+    --secundario: #523a34;
+}
+
+
+
+/* GLOBALES */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;/* Hack para box model */
+}
+
+*,*::before,*::after {
+    box-sizing: none;/* Hack para box model */
+}
+
+body {
+    font-size: 16px;/* 1rem = 10px */
+    font-family: 'Raleway', sans-serif;
+    color: var(--negro);
+    background-color: var(--primario);
+    /* background-image: linear-gradient(to top, #ffffff 0%, #cfd9df 100%); */
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+
+/* TIPOGRAFIAS */
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+
+
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .encabezado {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.header h1{
+    font-weight: lighter;
+}
+
+.header span{
+    font-weight: bold;
+}
+
+.wave {
+    margin-bottom: -2.8rem;
+}
+
+
+
+/* MENU DESPLEGABLE */
+.navegacionPrincipal {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.navegacionPrincipal {
+    list-style-type: none; 
+    text-align: center;
+    font-size: 0;
+}
+
+.navegacionPrincipal > ul li {
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    background: var(--primario);
+}
+
+.navegacionPrincipal li a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: var(--negro);
+}
+
+.navegacionPrincipal li:hover a {
+    background: #333333;
+    border-radius: 2rem;
+    color: var(--blanco);
+}
+
+.navegacionPrincipal li ul {
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+}
+
+.navegacionPrincipal li:hover ul {
+    width: 100%;
+    margin: 0 -4rem -4rem -4rem;
+    padding: 0 4rem 4rem 4rem;
+    z-index: 5;
+}
+
+.navegacionPrincipal li li {
+    display: block;
+    width: 100%;
+}
+
+.navegacionPrincipal li:hover li a {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    border-top: 1px solid #e5e5e5;
+    background: hsla(12, 22%, 26%, 0.46);
+    padding: .4rem;
+}
+
+.navegacionPrincipal li li a:hover {
+    background: hsla(9, 22%, 18%, 0.542);; 
+}
+
+
+
+/* CONTENIDO PRINCIPAL */
+.main {
+    background-color: #ffffff;
+}
+
+
+
+/* FOOTER */
+.footer {
+    display: flex;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.footer .redes{
+    text-align: center;
+}
+
+.footer .redes a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.footer .texto {
+    text-align: center;
+}
+
+.imagenes {
+    display: flex;
+}
+
+
+
+/* BOTONES */
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
